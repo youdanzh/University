@@ -40,7 +40,7 @@ public class StudentController {
 
     //TODO: /{id} , method : put,  update student
     @PutMapping("/{id}")
-    public ResponseEntity<Student> update( @RequestBody String name,@PathVariable String id){
+    public ResponseEntity<Student> update(@RequestBody String name, @PathVariable String id){
         return new ResponseEntity<>(studentService.update(name, id), HttpStatus.OK);
     }
 
