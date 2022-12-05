@@ -40,8 +40,8 @@ public class StudentController {
 
     //TODO: /{id} , method : put,  update student
     @PutMapping("/{id}")
-    public ResponseEntity<Student> update( @RequestBody String student_name,@PathVariable String student_id){
-        return new ResponseEntity<>(studentService.update(student_name, student_id), HttpStatus.OK);
+    public ResponseEntity<Student> update( @RequestBody String name,@PathVariable String id){
+        return new ResponseEntity<>(studentService.update(name, id), HttpStatus.OK);
     }
 
     @ExceptionHandler(ResourceNotFoundException.class)
